@@ -40,7 +40,7 @@ void bubble_sort(int *array, size_t size)
  * @array: array
  * @size: size
  */
-void print_array(int *array, size_t size);
+void print_array(int *array, size_t size)
 {
 	int x;
 
