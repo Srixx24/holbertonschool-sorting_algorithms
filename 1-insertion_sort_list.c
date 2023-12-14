@@ -58,22 +58,3 @@ void insertion_sort_list(listint_t **list)
 		temp = temp->next;
 	}
 }
-/**
- * print_list - print list
- * @list: list
- */
-void print_list(const listint_t *list)
-{
-	if (list == NULL)
-	{
-		printf("\n");
-		return;
-	}
-
-	while (list->next != NULL)
-	{
-		printf("%d, ", list->n);
-		list = list->next;
-	}
-	printf("%d\n", list->n);
-}
