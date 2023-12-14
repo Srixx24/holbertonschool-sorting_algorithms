@@ -33,10 +33,21 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 	}
-	for (y = 0; y < size; y++)
+	print_array(array, size);
+}
+/**
+ * print_array - printing array
+ * @array: array
+ * @size: size
+ */
+void print_array(int *array, size_t size);
+{
+	int x;
+
+	for (x = 0; x < size; x++)
 	{
-		printf("%d", array[y]);
-		if (y != size - 1)
+		printf("%d", array[x]);
+		if (x != size - 1)
 			printf(", ");
 	}
 	printf("\n");
