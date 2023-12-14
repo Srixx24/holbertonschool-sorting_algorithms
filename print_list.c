@@ -8,7 +8,7 @@ void print_list(const listint_t *list)
 {
 	if (list == NULL)
 	{
-		printf("\n");
+		printf("(nil)\n");
 		return;
 	}
 	while (list->next != NULL)
