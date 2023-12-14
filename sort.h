@@ -13,4 +13,6 @@ void selection_sort(int *array, size_t size);
 
 void insertion_sort_list(listint_t **list);
 
+void swap_node(listint_t **list);
+
 #endif

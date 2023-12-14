@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 typedef struct listint_s {
 	int n;
@@ -9,7 +10,7 @@ typedef struct listint_s {
  * swaplist - swap function
  * @list: list
  */
-void swaplist(listint_t **list)
+void swap_node(listint_t **list)
 {
 	listint_t *n1;
 	listint_t *n2;
@@ -26,7 +27,7 @@ void swaplist(listint_t **list)
 	n2->next = n1;
 
 	if (n2->prev == NULL)
-		*list = n2
+		*list = n2;
 
 	temp = *list;
 
@@ -56,7 +57,7 @@ void insertion_sort_list(listint_t **list)
 
 		while (prev && prev->n > x->n)
 		{
-			swap_nodes(list, prev, x);
+			swap_node(list, prev, x);
 			prev = x->prev;
 		}
 		temp = temp->next;
