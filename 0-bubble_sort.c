@@ -32,12 +32,12 @@ void bubble_sort(int *array, size_t size)
 				swap(&array[y], &array[y + 1]);
 			}
 		}
-		for (y = 0; y < size; y++)
-		{
-			printf("%d", array[y]);
-			if (y != size - 1)
-				printf(", ");
-		}
-		printf("\n");
 	}
+	for (y = 0; y < size; y++)
+	{
+		printf("%d", array[y]);
+		if (y != size - 1)
+			printf(", ");
+	}
+	printf("\n");
 }
