@@ -33,8 +33,6 @@ void bubble_sort(int *array, size_t size)
 				for (z = 0; z < size; z++)
 				{
 					printf("%d", array[z]);
-					if (z != size - 1)
-						printf(", ");
 				}
 			}
 		}
