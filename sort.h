@@ -20,4 +20,6 @@ void insertion_sort_list(listint_t **list);
 
 void swap_node(listint_t **list, listint_t *n1, listint_t *n2);
 
+void print_list(const listint_t *list);
+
 #endif
