@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include "sort.h"
 /**
- * swaplist - swap function
+ * swap_node - swap function
  * @list: list
+ * @n1: first node
+ * @n2: second node
  */
 void swap_node(listint_t **list, listint_t *n1, listint_t *n2)
 {
@@ -55,4 +57,23 @@ void insertion_sort_list(listint_t **list)
 		}
 		temp = temp->next;
 	}
+}
+/**
+ * print_list - print list
+ * @list: list
+ */
+void print_list(const listint_t *list)
+{
+	if (list == NULL)
+	{
+		printf("\n");
+		return;
+	}
+
+	while (list->next != NULL)
+	{
+		printf("%d, ", list->n);
+		list = list->next;
+	}
+	printf("%d\n", list->n);
 }
