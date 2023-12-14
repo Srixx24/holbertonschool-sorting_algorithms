@@ -35,20 +35,3 @@ void bubble_sort(int *array, size_t size)
 	}
 	print_array(array, size);
 }
-/**
- * print_array - printing array
- * @array: array
- * @size: size
- */
-void print_array(int *array, size_t size)
-{
-	int x;
-
-	for (x = 0; x < (int)size; x++)
-	{
-		printf("%d", array[x]);
-		if (x != (int)size - 1)
-			printf(", ");
-	}
-	printf("\n");
-}
