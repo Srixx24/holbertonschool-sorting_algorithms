@@ -44,10 +44,10 @@ void print_array(int *array, size_t size)
 {
 	int x;
 
-	for (x = 0; x < size; x++)
+	for (x = 0; x < (int)size; x++)
 	{
 		printf("%d", array[x]);
-		if (x != size - 1)
+		if (x != (int)size - 1)
 			printf(", ");
 	}
 	printf("\n");
