@@ -1,5 +1,10 @@
 #ifndef HEAD_
 #define HEAD_
+typedef struct listint_s {
+	int n;
+	struct listint_s *prev;
+	struct listint_s *next;
+} listint_t;
 
 void bubble_sort(int *array, size_t size);
 
@@ -13,6 +18,6 @@ void selection_sort(int *array, size_t size);
 
 void insertion_sort_list(listint_t **list);
 
-void swap_node(listint_t **list);
+void swap_node(listint_t **list, listint_t *n1, listint_t *n2);
 
 #endif

@@ -10,10 +10,8 @@ typedef struct listint_s {
  * swaplist - swap function
  * @list: list
  */
-void swap_node(listint_t **list)
+void swap_node(listint_t **list, listint_t *n1, listint_t *n2)
 {
-	listint_t *n1;
-	listint_t *n2;
 	listint_t *temp;
 
 	if (n1->prev)
