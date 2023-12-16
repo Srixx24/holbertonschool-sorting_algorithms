@@ -9,8 +9,6 @@
  */
 void swap_node(listint_t **list, listint_t *n1, listint_t *n2)
 {
-	listint_t *temp;
-
 	if (n1->prev)
 		n1->prev->next = n2;
 	if (n2->next)
@@ -24,14 +22,7 @@ void swap_node(listint_t **list, listint_t *n1, listint_t *n2)
 	if (n2->prev == NULL)
 		*list = n2;
 
-	temp = *list;
-
-	while (temp)
-	{
-		printf("%d ", temp->n);
-		temp = temp->next;
-	}
-	printf("\n");
+	print_list(*list);
 }
 /**
  * insertion_sort_list -  Insertion sort algorithm
