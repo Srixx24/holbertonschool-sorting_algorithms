@@ -49,8 +49,8 @@ void rehelp(int *array, int low, int hi)
 	if (low < hi)
 	{
 		x = split(array, low, hi);
-		rehelp(array, low, p - 1);
-		rehelp(array, p + 1, hi);
+		rehelp(array, low, x - 1);
+		rehelp(array, x + 1, hi);
 	}
 /**
  * quick_sort - Quick sort algorithm
