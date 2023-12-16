@@ -32,7 +32,6 @@ int split(int *array, int low, int hi)
 			x++;
 			swap(&array[x], &array[y]);
 		}
-		print_array(array, hi + 1);
 	}
 	swap(&array[x + 1], &array[hi]);
 
@@ -67,3 +66,4 @@ void rehelp(int *array, int low, int hi)
 		rehelp(array, x + 1, hi);
 	}
 }
+void print_array(int *array, size_t size);
