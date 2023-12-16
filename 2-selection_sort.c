@@ -5,6 +5,7 @@
  * @array: array
  * @size: size
  */
+void swap(int *a, int *b);
 void selection_sort(int *array, size_t size)
 {
 	size_t x, y;
