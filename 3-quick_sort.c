@@ -17,6 +17,7 @@ void swap(int *a, int *b)
  * @array: array
  * @low: lower
  * @hi: upper
+ * return: x + 1
  */
 int split(int *array, int low, int hi)
 {
@@ -33,6 +34,8 @@ int split(int *array, int low, int hi)
 		}
 	}
 	swap(&array[x + 1], &array[hi]);
+	print_array(array, high + 1);
+
 	return (x + 1);
 }
 void rehelp(int *array, int low, int high);
@@ -52,7 +55,6 @@ void quick_sort(int *array, size_t size)
  * @array: array
  * @low: lower
  * @hi: upper
- * @size: size
  */
 void rehelp(int *array, int low, int hi)
 {
