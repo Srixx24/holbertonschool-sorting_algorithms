@@ -18,7 +18,7 @@ void swap(int *a, int *b)
  * @low: lower
  * @hi: upper
  */
-int split(int *array, int low, int hi)
+int split(int *array, int low, int hi, int size)
 {
 	int pivot = array[hi];
 	int x = low - 1;
@@ -28,11 +28,11 @@ int split(int *array, int low, int hi)
 	{
 		if (array[y] <= pivot)
 		{
-			x++
+			x++;
 			swap(array, size, &array[x], &array[y]);
 		}
 	}
-	swap(array, size, &array[x +1], &array[hi];
+	swap(array, size, &array[x + 1], &array[hi]);
 	return (x + 1);
 }
 /**
