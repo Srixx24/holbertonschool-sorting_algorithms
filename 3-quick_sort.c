@@ -31,8 +31,8 @@ int split(int *array, int low, int hi)
 		{
 			x++;
 			swap(&array[x], &array[y]);
-			print_array(array, hi + 1);
 		}
+		print_array(array, hi + 1);
 	}
 	swap(&array[x + 1], &array[hi]);
 
