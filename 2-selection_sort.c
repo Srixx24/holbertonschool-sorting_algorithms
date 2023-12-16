@@ -25,14 +25,8 @@ void selection_sort(int *array, size_t size)
 
 		if (index != x)
 		{
-			temp = array[x];
-			array[x] = array[index];
-			array[index] = temp;
-
-			for (z = 0; z < size; z++)
-				printf("%d, ", array[z]);
-
-			printf("%d \n", array[size]);
+			swap(&array[x], &array[index]);
+			print_array(array, size);
 		}
 	}
 }

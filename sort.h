@@ -1,6 +1,11 @@
 #ifndef HEAD_
 #define HEAD_
-/* struct listint_s - declaring variables */
+/**
+ * struct listint_s - declaring variables 
+ * @n: integer
+ * @prev: previous
+ * @next: next
+ * */
 typedef struct listint_s
 {
 	int n;
