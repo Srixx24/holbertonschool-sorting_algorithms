@@ -35,6 +35,18 @@ int split(int *array, int low, int hi)
 	swap(&array[x + 1], &array[hi]);
 	return (x + 1);
 }
+void rehelp(int *array, int low, int high);
+/**
+ * quick_sort - Quick sort algorithm
+ * @array: array
+ * @size: size
+ */
+void quick_sort(int *array, size_t size)
+{
+	if (array == NULL || size <= 1)
+		return;
+	rehelp(array, 0, size - 1);
+}
 /**
  * rehelp - sort array recursively
  * @array: array
@@ -52,15 +64,4 @@ void rehelp(int *array, int low, int hi)
 		rehelp(array, low, x - 1);
 		rehelp(array, x + 1, hi);
 	}
-/**
- * quick_sort - Quick sort algorithm
- * @array: array
- * @size: size
- */
-void quick_sort(int *array, size_t size)
-{
-	if (array == NULL || size <= 1)
-		return;
-
-	rehelp(array, 0, size - 1);
 }
