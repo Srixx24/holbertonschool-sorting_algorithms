@@ -17,7 +17,7 @@ void swap(int *a, int *b)
  * @array: array
  * @low: lower
  * @hi: upper
- * return: x + 1
+ * return: 0
  */
 int split(int *array, int low, int hi)
 {
@@ -63,7 +63,7 @@ void rehelp(int *array, int low, int hi)
 	{
 		x = split(array, low, hi);
 		rehelp(array, low, x - 1);
+		print_array(array, hi + 1);
 		rehelp(array, x + 1, hi);
 	}
 }
-void print_array(int *array, size_t size);
