@@ -8,7 +8,7 @@
 void swap(int *a, int *b)
 {
 	int temp = *a;
-	
+
 	*a = *b;
 	*b = temp;
 }
@@ -28,7 +28,7 @@ void selection_sort(int *array, size_t size)
 	for (x = 0; x < size - 1; x++)
 	{
 		index = x;
-		for (y = x + 1; y < size - 1; y++)
+		for (y = x + 1; y < size; y++)
 		{
 			if (array[y] < array[index])
 				index = y;
