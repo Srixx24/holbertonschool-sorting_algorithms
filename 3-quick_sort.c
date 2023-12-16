@@ -11,13 +11,14 @@ void swap(int *a, int *b)
 
 	*a = *b;
 	*b = temp;
+	print_array(a, 2);
 }
 /**
  * split - spliting array
  * @array: array
  * @low: lower
  * @hi: upper
- * return: 0
+ * Return: 0
  */
 int split(int *array, int low, int hi)
 {
@@ -62,7 +63,6 @@ void rehelp(int *array, int low, int hi)
 	if (low < hi)
 	{
 		x = split(array, low, hi);
-		print_array(array, hi + 1);
 		rehelp(array, low, x - 1);
 		rehelp(array, x + 1, hi);
 	}
