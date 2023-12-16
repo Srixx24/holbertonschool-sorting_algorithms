@@ -1,11 +1,22 @@
 #include <stdio.h>
 #include "sort.h"
 /**
+ * swap - swaping values
+ * @a: first value
+ * @b: second value
+ */
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	
+	*a = *b;
+	*b = temp;
+}
+/**
  * selection_sort - Selection sort algorithm
  * @array: array
  * @size: size
  */
-void swap(int *a, int *b);
 void selection_sort(int *array, size_t size)
 {
 	size_t x, y;
