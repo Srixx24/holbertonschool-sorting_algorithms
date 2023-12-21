@@ -19,22 +19,29 @@ void swap(int *a, int *b)
  * @hi: upper
  * Return: 0
  */
-int split(int *array, int low, int hi)
+int split(int *array, int low, int hi, size_t size)
 {
-	int pivot = array[hi];
-	int x = low - 1;
-	int y;
+	int pivot, x, y;
 
-	for (y = low; y <= hi - 1; y++)
+	pivot = array + hi;
+	for (x = y = low; y < hi; y++)
 	{
-		if (array[y] <= pivot)
+		if (array[y] < *pivot)
 		{
+			if (x < y)
+			{
+				swap(array + x, array + y);
+				print_array(array, size);
+			}
 			x++;
-			swap(&array[x], &array[y]);
 		}
 	}
-	swap(&array[x + 1], &array[hi]);
-	return (x + 1);
+	if (array[x] > *pivot)
+	{
+		swap(array + x, pivot);
+		print_array(array, size);
+	}
+	return (x);
 }
 void rehelp(int *array, int low, int high);
 /**
