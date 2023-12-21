@@ -6,13 +6,12 @@
  * @b: second value
  * @size: size of array
  */
-void swap(int *a, int *b, size_t size)
+void swap(int *a, int *b)
 {
 	int temp = *a;
 
 	*a = *b;
 	*b = temp;
-	print_array(a, size);
 }
 /**
  * split - spliting array
@@ -32,7 +31,7 @@ int split(int *array, int low, int hi)
 		if (array[y] <= pivot)
 		{
 			x++;
-			swap(&array[x], &array[y], size);
+			swap(&array[x], &array[y]);
 		}
 	}
 	swap(&array[x + 1], &array[hi]);
