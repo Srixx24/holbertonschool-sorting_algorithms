@@ -17,6 +17,7 @@ void swap(int *a, int *b)
  * @array: array
  * @low: lower
  * @hi: upper
+ * @size: size
  * Return: 0
  */
 int split(int *array, int low, int hi, size_t size)
@@ -60,6 +61,7 @@ void quick_sort(int *array, size_t size)
  * @array: array
  * @low: lower
  * @hi: upper
+ * @size: size
  */
 void rehelp(int *array, int low, int hi, size_t size)
 {
