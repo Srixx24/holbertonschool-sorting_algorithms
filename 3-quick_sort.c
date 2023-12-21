@@ -11,6 +11,7 @@ void swap(int *a, int *b)
 
 	*a = *b;
 	*b = temp;
+	print_array(a, 2);
 }
 /**
  * split - spliting array
