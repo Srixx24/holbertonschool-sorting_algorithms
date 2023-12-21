@@ -34,7 +34,7 @@ int split(int *array, int low, int hi)
 		}
 	}
 	swap(&array[x + 1], &array[hi]);
-	print_array(array + low, hi - low + 1)
+	print_array(array + low, hi - low + 1);
 	return (x + 1);
 }
 void rehelp(int *array, int low, int high);
