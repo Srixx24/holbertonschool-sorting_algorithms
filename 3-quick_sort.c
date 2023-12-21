@@ -4,7 +4,6 @@
  * swap - swaping values
  * @a: first value
  * @b: second value
- * @size: size of array
  */
 void swap(int *a, int *b)
 {
