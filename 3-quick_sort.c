@@ -21,7 +21,7 @@ void swap(int *a, int *b)
  */
 int split(int *array, int low, int hi, size_t size)
 {
-	int pivot, x, y;
+	int *pivot, x, y;
 
 	pivot = array + hi;
 	for (x = y = low; y < hi; y++)
@@ -61,13 +61,13 @@ void quick_sort(int *array, size_t size)
  * @low: lower
  * @hi: upper
  */
-void rehelp(int *array, int low, int hi)
+void rehelp(int *array, int low, int hi, size_t size)
 {
 	int x;
 
 	if (low < hi)
 	{
-		x = split(array, low, hi);
+		x = split(array, low, hi, size);
 		rehelp(array, low, x - 1);
 		rehelp(array, x + 1, hi);
 	}
