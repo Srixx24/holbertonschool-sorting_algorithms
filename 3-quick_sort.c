@@ -53,7 +53,7 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size <= 1)
 		return;
-	rehelp(array, 0, size - 1);
+	rehelp(array, 0, size - 1, size);
 }
 /**
  * rehelp - sort array recursively
