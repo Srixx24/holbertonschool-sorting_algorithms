@@ -43,7 +43,7 @@ int split(int *array, int low, int hi, size_t size)
 	}
 	return (x);
 }
-void rehelp(int *array, int low, int high);
+void rehelp(int *array, int low, int high, size_t size);
 /**
  * quick_sort - Quick sort algorithm
  * @array: array
@@ -68,7 +68,7 @@ void rehelp(int *array, int low, int hi, size_t size)
 	if (low < hi)
 	{
 		x = split(array, low, hi, size);
-		rehelp(array, low, x - 1);
-		rehelp(array, x + 1, hi);
+		rehelp(array, low, x - 1, size);
+		rehelp(array, x + 1, hi, size);
 	}
 }
