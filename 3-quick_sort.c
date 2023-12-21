@@ -4,14 +4,15 @@
  * swap - swaping values
  * @a: first value
  * @b: second value
+ * @size: size of array
  */
-void swap(int *a, int *b)
+void swap(int *a, int *b, size_t size)
 {
 	int temp = *a;
 
 	*a = *b;
 	*b = temp;
-	print_array(a, 20);
+	print_array(a, size);
 }
 /**
  * split - spliting array
@@ -31,7 +32,7 @@ int split(int *array, int low, int hi)
 		if (array[y] <= pivot)
 		{
 			x++;
-			swap(&array[x], &array[y]);
+			swap(&array[x], &array[y], size);
 		}
 	}
 	swap(&array[x + 1], &array[hi]);
